@@ -17,26 +17,27 @@
         <form class="row g-3">
 
             <div class="input-group-sm row mb-3">
-            <label for="formGroupExampleInput" class="form-label">Username</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter username here" required>
+            <label for="userNameInput" class="form-label">Username</label>
+            <input type="text" class="form-control" id="userNameInput" placeholder="Enter username here" required>
             </div>
           <div class="input-group-sm row mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Password</label>
-            <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Enter password here" required>
+            <label for="passwordInput" class="form-label">Password</label>
+            <input type="password" class="form-control" id="passwordInput" placeholder="Enter password here" required>
           </div>
           <div class="input-group-sm row mb-3">
-            <label for="formGroupExampleInput4" class="form-label">Password Again</label>
-            <input type="password" class="form-control" id="formGroupExampleInput4" placeholder="Repeat the password" required>
+            <label for="passwordInput2" class="form-label">Password Again</label>
+            <input type="password" class="form-control" id="passwordInput2" placeholder="Repeat the password" required>
           </div>
           <div class="input-group-sm row mb-3">
-            <label for="formGroupExampleInput3" class="form-label">Display Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Enter your name here" required>
+            <label for="NicknameInput" class="form-label">Display Name</label>
+            <input type="text" class="form-control" id="NicknameInput" placeholder="Enter your name here" required>
           </div>
           <div class="input-group-sm row mb-3">
-            <label for="formGroupExampleInput5" class="form-label">Profile picture</label>
-            <input type="file" class="form-control" id="formGroupExampleInput5" >
+            <label for="pictureInput" class="form-label">Profile picture</label>
+            <input type="file" class="form-control" id="pictureInput" >
           </div>
-          <div class="LoginButton input-group-sm col-sm-6"><input class="btn btn-primary" type="submit" value="Register"></div>
+          <div class="LoginButton input-group-sm col-sm-6">
+            <button onclick="registerUser()" class="btn btn-primary" type="submit">Register</button></div>
           <div class="LoginText input-group-sm col-sm-6">Already registered?<a href="login.html">Click here</a> to login
           </div>
         
@@ -48,5 +49,42 @@
           <div id="grayBG" >
 
           </div>
+          <script src="index.js"></script>
     </body>
+    <script lang="javascript">
+
+      function registerUser(){
+        let userNameInput = document.getElementById("userNameInput").value;
+        let passwordInput = document.getElementById("passwordInput").value;
+        let passwordInput2 = document.getElementById("passwordInput2").value;
+        let NicknameInput = document.getElementById("NicknameInput").value;
+        let pictureInput = document.getElementById("pictureInput").value;
+        
+        if(!valdiation(passwordInput,passwordInput2,userNameInput,NicknameInput)){
+          return;
+        }
+        let user = {"username": userNameInput, "password": passwordInput, "Nickname": NicknameInput, "picture": pictureInput};
+        addUser(user);
+        window.location = "chatScreen.html";
+        
+      }
+
+      
+
+      function valdiation(pass1, pass2, name, nickname){
+      if(name.length < 2 || nickname.length < 2){
+        return false;
+      }
+      if (typeof pass1 !== "string" || typeof pass2 !== "string") {
+        return false; // we only process strings! 
+      } 
+      if(pass1 !== pass2) {
+          return false;
+        }
+      if (pass1.length < 8 || pass1.length > 14){
+        return false;
+      }
+       return /^[A-Za-z0-9]*$/.test(pass1);
+    }
+    </script>
 </html>

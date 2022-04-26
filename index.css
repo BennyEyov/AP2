@@ -7,6 +7,24 @@ html,body {
     background-color: rgb(58, 220, 58);
   
 }  
+#greenBG1 {
+    height: 30%;
+    width: 100%;    
+    background-color: rgb(58, 220, 58);
+  
+}  
+#grayBG1 {
+    height: 50%;
+    width: 100%;    
+    background-color: rgb(236, 234, 234);
+  
+}
+#chatBoxBG1 {
+    height: 70%;
+    width: 60%;    
+    background-color: rgb(99, 58, 220);
+  
+}    
 .loginBOX{
     
     width: 50%; 
@@ -29,3 +47,25 @@ html,body {
     float: left;
     padding-left: 0px;
 }
+#leftPanel {
+    height: 100%;
+
+    width: 40%;
+    background-color: rgb(236, 234, 234);
+    float: left;
+    
+
+}
+#rightPanel {
+    width: 60%;
+    float: left;
+    
+}
+.picDim{
+    height: 20px;
+    width: 20px;
+}
+#idPanel {
+    background-color: rgb(194, 190, 190);
+}
+

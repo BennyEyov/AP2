@@ -4,13 +4,13 @@ html,body {
 #greenBG {
     height: 40%;
     width: 100%;    
-    background-color: rgb(58, 220, 58);
+    background-color: darkgreen
   
 }  
 #greenBG1 {
     height: 30%;
     width: 100%;    
-    background-color: rgb(58, 220, 58);
+    background-color: rgb(15, 142, 15);
   
 }  
 #grayBG1 {
@@ -19,12 +19,6 @@ html,body {
     background-color: rgb(236, 234, 234);
   
 }
-#chatBoxBG1 {
-    height: 70%;
-    width: 60%;    
-    background-color: rgb(99, 58, 220);
-  
-}    
 .loginBOX{
     
     width: 50%; 
@@ -47,20 +41,34 @@ html,body {
     float: left;
     padding-left: 0px;
 }
-#leftPanel {
-    height: 100%;
 
-    width: 40%;
+#chatBoxBG1 {
+    height: 400px;
+    width: 65%;    
+   
+  
+}    
+#leftPanel {
+    width: 37%;
     background-color: rgb(236, 234, 234);
     float: left;
     
-
 }
 #rightPanel {
-    width: 60%;
+    width: 63%;
     float: left;
     
 }
+.idPanel {
+    height: 40px;
+    background-color: mediumseagreen;
+}
+#chatBG {
+    height: 330px;
+    background-color: rgb(248, 238, 191);
+
+}
+
 .picDim{
     height: 40px;
     width: 40px;
@@ -69,19 +77,14 @@ html,body {
     height: 30px;
     width: 30px;
 }
-.idPanel {
-    height: 30px;
-    background-color: rgb(228, 228, 228);
-}
-#chatBG {
-    height: 550px;
-    background-color: rgb(248, 238, 191);
-
-}
+.smallIcons {
+    height: 25px;
+    width: 30px;
+}   
 #inputIcon {
     display: none;
     background-color: gray;
 }
-.borders {
-    border: 2px black;
+#inputBox {
+    height: 20px; 
 }

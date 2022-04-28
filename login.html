@@ -10,39 +10,31 @@
     </head>
 
     <body>
+
         <div id="greenBG" >
-        
-        <div class="rounded-3 border border-3 position-absolute top-50 start-50 translate-middle loginBOX">
-            
+
+          <div class="rounded-3 border border-3 position-absolute top-50 start-50 translate-middle loginBOX">
             <div class="input-group-sm mb-3">
-            <label for="loginUserInput" class="form-label form-control-sm" >User Name</label>
-            <input type="text" class="form-control" id="loginUserInput" placeholder="Enter username here">
+              <label for="loginUserInput" class="form-label form-control-sm" >User Name</label>
+              <input type="text" class="form-control" id="loginUserInput" placeholder="Enter username here">
+            </div>
+            <div class="input-group-sm mb-3">
+              <label for="loginPasswordInput" class="form-label form-control-sm">Password</label>
+              <input type="password" class="form-control" id="loginPasswordInput" placeholder="Enter password here">
+            </div>
+            <div class="LoginButton input-group-sm col-sm-6">
+              <button onclick="loginUser()" class="btn btn-primary" type="button">Login</button>
+            </div>
+            <div class="input-group-sm col-sm-6 LoginText">Not registered?<a href="register.html">Click here</a> to register</div>
           </div>
-          <div class="input-group-sm mb-3">
-            <label for="loginPasswordInput" class="form-label form-control-sm">Password</label>
-            <input type="password" class="form-control" id="loginPasswordInput" placeholder="Enter password here">
-          </div>
-          <div class="input-group-sm col-sm-6 LoginButton"><button onclick="loginUser()" class="btn btn-primary" type="submit">Login</button>
-          </div>
-          <div class="input-group-sm col-sm-6 LoginText">Not registered?<a href="register.html">Click here</a> to register
-          </div>
-        
+
         </div>
-        
-      </div>
-          <div id="grayBG" ></div>
-          <script src="index.js"></script>
+
+        <div id="grayBG" ></div>
+
+
+        <script src="index.js"></script>
+
     </body>
-    <script lang="javascript">
-      
-      function loginUser(){
-        let loginUsername1 = document.getElementById("loginUserInput").value;
-        let loginPassword1 = document.getElementById("loginPasswordInput").value;
-        let item = usersList.find(o => o.username === loginUsername1); 
-          if(item["password"] === loginPassword1){
-            window.location.href = "chatScreen.html";
-          }
-          return;
-        } 
-    </script>
+
 </html>

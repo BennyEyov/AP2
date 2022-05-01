@@ -22,7 +22,7 @@
         <div class="position-relative idPanel">
           <img src="pic1.jpg"
             class="myProfilePics position-absolute top-50 start-0 translate-middle-y rounded-circle flex-shrink-0">
-          <small class="position-absolute top-50 start-50 translate-middle">Me</small>
+          <small id="currentUser" class="position-absolute top-50 start-50 translate-middle">Me</small>
           <a class="navbar-brand myProfilePics position-absolute top-50 end-0 translate-middle-y" href="#"><img
               src="addIcon.png" class="myProfilePics"></a>
         </div>
@@ -91,7 +91,7 @@
         </div>
 
         <div class="input-group input-group-sm mb-3" id="inputBox">
-          <label for="inputIcon"><img src="attachIcon.png" class="smallIcons"></label>
+          <label for="inputIcon"><i class="bi bi-paperclip"></i></label>
           <input onclick="openButtons()" type="button" id="inputIcon">
 
           <div id="moreButtons" class="btn-group" role="group" aria-label="Basic outlined example"
@@ -100,7 +100,6 @@
             <button type="button" class="btn btn-light btn-sm"><i class="bi bi-camera-reels"></i></button>
             <button type="button" class="btn btn-light btn-sm"><i class="bi bi-image"></i></button>
           </div>
-          
 
 
 
@@ -109,7 +108,13 @@
           <button class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
         </div>
 
+
+
+        <script src="index.js"></script>
+
         <script lang="javascript">
+          const myName = document.getElementById("currentUser");
+          myName.innerHTML = currentLogin;
           function openButtons() {
             var a = document.getElementById("moreButtons");
             if (a.style.display === "none") {

@@ -74,8 +74,8 @@ html,body {
     width: 40px;
 }
 .myProfilePics {
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
 }
 .smallIcons {
     height: 25px;
@@ -87,4 +87,16 @@ html,body {
 }
 #inputBox {
     height: 20px; 
+}
+
+.myMessage {
+    background-color: aquamarine;
+    color: slategrey;
+    padding: 18px 20px;
+    line-height: 26px;
+    font-size: 16px;
+    border-radius: 7px;
+    display: inline-block;
+    
+    position: relative
 }
